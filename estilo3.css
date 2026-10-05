@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* =========================
+   BARRA SUPERIOR (HEADER)
+========================= */
+
+.navbar-landing {
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent);
+}
+
+.logo {
+    color: #f47521;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.logo-icon {
+    font-size: 24px;
+}
+
+.botones-landing {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-acceder {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.btn-acceder:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.btn-prueba-naranja {
+    background: #f47521;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.btn-prueba-naranja:hover {
+    background: #ff8a3d;
+}
+
+/* =========================
+   HERO / PORTADA PRINCIPAL
+========================= */
+
+.hero-welcome {
+    position: relative;
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 60px;
+    overflow: hidden;
+}
+
+.grid-mosaico {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 80%;
+    height: 120%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    transform: rotate(-6deg) scale(1.1);
+    opacity: 0.45;
+}
+
+.grid-mosaico img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #000 35%, rgba(0,0,0,0.6) 70%, transparent 100%),
+                linear-gradient(0deg, #000 0%, transparent 40%);
+}
+
+.contenido-welcome {
+    position: relative;
+    z-index: 10;
+    max-width: 650px;
+}
+
+.contenido-welcome h1 {
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contenido-welcome p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.btn-prueba-gigante {
+    background: #f47521;
+    color: #000;
+    border: none;
+    padding: 18px 36px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-prueba-gigante:hover {
+    background: #ff8a3d;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   PLANES DE SUSCRIPCIÓN
+========================= */
+
+.planes-section {
+    padding: 80px 40px;
+    background: #141519;
+    text-align: center;
+}
+
+.planes-section h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    background: #000;
+    border: 1px solid #23252b;
+    border-radius: 8px;
+    padding: 35px 25px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: 0.3s;
+}
+
+.plan-card:hover {
+    border-color: #f47521;
+}
+
+.plan-card.popular {
+    border: 2px solid #f47521;
+    transform: scale(1.04);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f47521;
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 14px;
+    border-radius: 12px;
+}
+
+.plan-header h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.plan-precio {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f47521;
+    margin-bottom: 25px;
+}
+
+.plan-precio span {
+    font-size: 14px;
+    color: #aaa;
+    font-weight: normal;
+}
+
+.plan-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.plan-features li {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.plan-features li::before {
+    content: "✓";
+    color: #f47521;
+    font-weight: bold;
+}
+
+.btn-plan {
+    background: transparent;
+    border: 2px solid #f47521;
+    color: #f47521;
+    font-weight: bold;
+    padding: 14px 0;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-plan:hover {
+    background: rgba(244,117,33,0.1);
+}
+
+.btn-popular {
+    background: #f47521;
+    color: #000;
+}
+
+.btn-popular:hover {
+    background: #ff8a3d;
+}
+
+
+/* CATÁLOGO DE ANIMES */
+
+.anime-section {
+    padding: 20px 40px;
+    background: #000;
+}
+
+.anime-section h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.anime-subtitle {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.anime-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.anime-card {
+    min-width: 140px;
+    text-decoration: none;
+    color: white;
+}
+
+.anime-card img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.anime-card h3 {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.anime-card p {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+
+/* =========================
+   SECCIÓN GÉNEROS
+========================= */
+
+.generos-section {
+    padding: 20px 40px 25px;
+    background: #000;
+    text-align: center;
+}
+
+.generos-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.generos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.genero-badge {
+    background: #141519;
+    border: 1px solid #333;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ddd;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.genero-badge:hover {
+    border-color: #f47521;
+    color: #f47521;
+}
+
+/* =========================
+   PREGUNTAS FRECUENTES (FAQ)
+========================= */
+
+.faq-section {
+    padding: 80px 40px;
+    background: #141519;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #000;
+    border: 1px solid #23252b;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-icon {
+    font-size: 22px;
+    color: #f47521;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 20px 25px;
+    max-height: 200px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* =========================
+   DISPOSITIVOS COMPATIBLES
+========================= */
+
+.dispositivos-section {
+    padding: 80px 40px;
+    background: #000;
+    text-align: center;
+}
+
+.dispositivos-section h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.dispositivos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.dispositivo-card {
+    background: #141519;
+    padding: 30px 20px;
+    border-radius: 8px;
+    width: 210px;
+    border: 1px solid #222;
+}
+
+.disp-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.dispositivo-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.dispositivo-card p {
+    color: #888;
+    font-size: 13px;
+}
+
+/* =========================
+   AVISO LEGAL & COOKIES
+========================= */
+
+.legal-disclaimer {
+    text-align: center;
+    padding: 20px 40px 120px;
+    color: #777;
+    font-size: 12px;
+    background: #000;
+}
+
+.cookies {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 40px;
+    background: #000;
+    border-top: 1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    z-index: 200;
+}
+
+.cookies p {
+    max-width: 900px;
+    color: #ccc;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.cookies a {
+    color: #00aeef;
+    text-decoration: underline;
+}
+
+.cookies button {
+    padding: 12px 28px;
+    background: #00aeef;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cookies button:hover {
+    background: #33c2ff;
+}
+
+/* =========================
+   RESPONSIVO (MÓVIL)
+========================= */
+
+@media (max-width: 768px) {
+    .navbar-landing {
+        padding: 0 20px;
+    }
+
+    .contenido-welcome h1 {
+        font-size: 36px;
+    }
+
+    .hero-welcome {
+        padding: 0 20px;
+    }
+
+    .plan-card.popular {
+        transform: scale(1);
+    }
+
+    .cookies {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .cookies button {
+        width: 100%;
+    }
+}
+
+
+
+/* =========================
+   NOVEDADES
+========================= */
+
+.anime-section {
+    padding: 30px 40px;
+    background: #000;
+}
+
+.anime-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.anime-subtitle {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+
+/* CARRUSEL */
+
+.anime-carrusel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+
+/* ANIMES */
+
+.anime-grid {
+    display: flex;
+    gap: 25px;
+
+    overflow: hidden;
+
+    flex: 1;
+    max-width: 1050px;
+
+    margin: auto;
+
+    scroll-behavior: smooth;
+}
+
+
+/* TARJETAS */
+
+.anime-card {
+    min-width: 200px;
+
+    color: white;
+    text-decoration: none;
+}
+
+.anime-card img {
+    width: 200px;
+    height: 280px;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 4px;
+}
+
+.anime-card h3 {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.anime-card p {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* FLECHAS */
+
+.flecha {
+    width: 45px;
+    height: 70px;
+
+    flex-shrink: 0;
+
+    background: #141519;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+.flecha:hover {
+    background: #f47521;
+    color: #000;
+}
