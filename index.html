@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchyroll - El mayor catálogo de anime del mundo a demanda</title>
+    <link rel="stylesheet" href="estilo3.css">
+</head>
+
+<body>
+
+<!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+<header class="navbar-landing">
+
+    <div class="logo">
+        <span class="logo-icon">◉</span> ANIMEPOLL
+    </div>
+
+    <div class="botones-landing">
+        <button class="btn-acceder" onclick="window.location.href='acceder.html'">
+            ACCEDER
+        </button>
+
+        <button class="btn-prueba-naranja" onclick="document.getElementById('planes').scrollIntoView({behavior: 'smooth'})">
+    INICIAR PRUEBA GRATIS
+</button>
+
+</header>
+
+ 
+    <!-- SECCIÓN HERO (PORTADA CON TEXTO E IMAGEN DE FONDO) -->
+    <section class="hero-welcome">
+        <!-- Fondo mosaico con imágenes de anime -->
+        <div class="grid-mosaico">
+            <img src="A Silent Voice.jpg" alt="Free!">
+            <img src="ANIME4.jpg" alt="Jujutsu Kaisen">
+            <img src="A Silent Voice.jpg" alt="Solo Leveling">
+            <img src="ANIME1.jpg" alt="My Hero Academia">
+            <img src="ANIME2.jpg" alt="Demon Slayer">
+            <img src="ANIME 3.jpg" alt="Frieren">
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="contenido-welcome">
+            <h1>El mayor catálogo de anime del mundo a demanda</h1>
+            <p>Únete a Crunchyroll y descubre el mundo del anime. Disfruta de cientos de títulos sin anuncios.</p>
+            <button class="btn-prueba-gigante" onclick="document.getElementById('planes').scrollIntoView({behavior: 'smooth'})">
+             INICIAR PRUEBA GRATIS DE 7 DÍAS
+     </button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PLANES PREMIUM Y SUSCRIPCIONES -->
+     <section class="planes-section" id="planes"> 
+        <h2>Planes de suscripción Premium</h2>
+        <p class="subtitle">Disfruta de anime sin publicidad, nuevos episodios poco después de su emisión en Japón y más.</p>
+
+        <div class="cards-grid">
+            <!-- PLAN FAN -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>FAN</h3>
+                    <div class="plan-precio">S/ 19.00 <span>/ mes</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Sin publicidad</li>
+                    <li>Acceso ilimitado al catálogo de Crunchyroll</li>
+                    <li>Nuevos episodios poco después de Japón</li>
+                    <li>Disponible en 1 dispositivo a la vez</li>
+                </ul>
+                <button class="btn-plan">PROBAR 7 DÍAS GRATIS</button>
+            </div>
+
+            <!-- PLAN MEGA FAN (DESTACADO) -->
+            <div class="plan-card popular">
+                <div class="popular-tag">MÁS POPULAR</div>
+                <div class="plan-header">
+                    <h3>MEGA FAN</h3>
+                    <div class="plan-precio">S/ 24.00 <span>/ mes</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Sin publicidad</li>
+                    <li>Acceso ilimitado al catálogo de Crunchyroll</li>
+                    <li>Nuevos episodios poco después de Japón</li>
+                    <li>Disponible en 4 dispositivos a la vez</li>
+                    <li>Visionado sin conexión (descargas)</li>
+                </ul>
+                <button class="btn-plan btn-popular">PROBAR 7 DÍAS GRATIS</button>
+            </div>
+
+            <!-- PLAN MEGA FAN ANUAL -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>MEGA FAN (ANUAL)</h3>
+                    <div class="plan-precio">S/ 240.00 <span>/ año</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Ahorra un 16% respecto al pago mensual</li>
+                    <li>Sin publicidad</li>
+                    <li>Disponible en 4 dispositivos a la vez</li>
+                    <li>Visionado sin conexión (descargas)</li>
+                </ul>
+                <button class="btn-plan">PROBAR 7 DÍAS GRATIS</button>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- SECCIÓN GÉNEROS DESTACADOS -->
+    <section class="generos-section">
+        <h2>Explora por Géneros</h2>
+        <div class="generos-grid">
+            <div class="genero-badge">Acción</div>
+            <div class="genero-badge">Aventura</div>
+            <div class="genero-badge">Comedia</div>
+            <div class="genero-badge">Drama</div>
+            <div class="genero-badge">Fantasía</div>
+            <div class="genero-badge">Deportes</div>
+            <div class="genero-badge">Romance</div>
+            <div class="genero-badge">Ciencia Ficción</div>
+            <div class="genero-badge">Recuentos de la vida</div>
+            <div class="genero-badge">Sobrenatural</div>
+        </div>
+    </section>
+
+
+
+
+<!-- SECCIÓN NOVEDADES -->
+<section class="anime-section">
+
+    <h2>Novedades</h2>
+
+    <p class="anime-subtitle">
+        ¡Para que no te pierdas tus animes favoritos!
+    </p>
+
+    <div class="anime-carrusel">
+
+        <!-- Flecha izquierda -->
+        <button class="flecha izquierda" onclick="moverAnimes(-1)">
+            ‹
+        </button>
+
+        <!-- Animes -->
+        <div class="anime-grid" id="animeGrid">
+
+            <a href="anime1.html" class="anime-card">
+                <img src="ANIME1.jpg" alt="Anime 1">
+                <h3>Anime 1</h3>
+                <p>Sub | Dob</p>
+            </a>
+
+            <a href="anime2.html" class="anime-card">
+                <img src="ANIME2.jpg" alt="Anime 2">
+                <h3>Anime 2</h3>
+                <p>Sub | Dob</p>
+            </a>
+
+            <a href="anime3.html" class="anime-card">
+                <img src="ANIME 3.jpg" alt="Anime 3">
+                <h3>Anime 3</h3>
+                <p>Sub | Dob</p>
+            </a>
+
+            <a href="anime4.html" class="anime-card">
+                <img src="kaisen.jpg" alt="Anime 4">
+                <h3>Anime 4</h3>
+                <p>Sub | Dob</p>
+            </a>
+
+            <a href="anime5.html" class="anime-card">
+                <img src="Demon Slayer Posters.jpg" alt="Anime 5">
+                <h3>Anime 5</h3>
+                <p>Sub | Dob</p>
+            </a>
+
+            <a href="anime6.html" class="anime-card">
+                <img src="Haikyuu!!.jpg" alt="Anime 6">
+                <h3>Anime 6</h3>
+                <p>Sub | Dob</p>
+            </a>
+
+        </div>
+
+        <!-- Flecha derecha -->
+        <button class="flecha derecha" onclick="moverAnimes(1)">
+            ›
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- SECCIÓN PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="faq-section">
+        <h2>Preguntas frecuentes</h2>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Qué es Crunchyroll?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Crunchyroll es el servicio de transmisión de anime líder en el mundo, con el catálogo más grande de anime en simultáneo con Japón, doblajes exclusivos y manga.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cómo funciona la prueba gratuita de 7 días?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Puedes disfrutar de 7 días de acceso Premium completo totalmente gratis. Si decides no continuar, puedes cancelar en cualquier momento antes de que termine el periodo de prueba sin ningún cargo.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿En qué dispositivos puedo ver Crunchyroll?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Puedes ver Crunchyroll en navegadores web, iOS, Android, PlayStation, Xbox, Nintendo Switch, Chromecast, Apple TV, Roku, Amazon Fire TV y Smart TVs compatibles.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Puedo ver anime con doblaje en mi idioma?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    ¡Sí! Ofrecemos miles de episodios con doblaje en español latino, español de España, inglés, portugués, francés y otros idiomas.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DISPOSITIVOS COMPATIBLES -->
+    <section class="dispositivos-section">
+        <h2>Disponibilidad en tus dispositivos favoritos</h2>
+        <p class="subtitle">Disfruta de Crunchyroll en tu TV, computadora, consola de juegos o dispositivo móvil.</p>
+
+        <div class="dispositivos-grid">
+            <div class="dispositivo-card">
+                <span class="disp-icon">💻</span>
+                <h4>Navegador Web</h4>
+                <p>PC & Mac</p>
+            </div>
+            <div class="dispositivo-card">
+                <span class="disp-icon">📱</span>
+                <h4>Móviles</h4>
+                <p>iOS & Android</p>
+            </div>
+            <div class="dispositivo-card">
+                <span class="disp-icon">🎮</span>
+                <h4>Consolas</h4>
+                <p>PS4, PS5, Xbox, Switch</p>
+            </div>
+            <div class="dispositivo-card">
+                <span class="disp-icon">📺</span>
+                <h4>Smart TV</h4>
+                <p>Roku, Fire TV, Apple TV, Android TV</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTA LEGAL DE DISPONIBILIDAD -->
+    <div class="legal-disclaimer">
+        La disponibilidad del contenido varía según el país o la región. Se requieren términos y condiciones para el servicio.
+    </div>
+
+    <!-- BANNER INFERIOR DE COOKIES -->
+    <div class="cookies" id="cookies">
+        <p>
+            Nuestro sitio utiliza cookies y otras tecnologías (las "cookies") para mejorar su funcionamiento, para que sea
+            más personal para usted y para ofrecerle publicidad basada sobre su actividad de navegación y sus intereses
+            tanto en este sitio como en otros. Para obtener más información consulte nuestra 
+            <a href="#">Política de privacidad y de cookies</a>. Para opciones sobre cookies específicas, lo que incluye revocar su consentimiento tras prestarlo,
+            acceda a la <a href="#">Herramienta de consentimiento de cookies</a>. La disponibilidad del contenido varía según el país o la región.
+        </p>
+        <button id="aceptarCookies">Aceptar todas</button>
+    </div>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script>
+        // Lógica para abrir/cerrar acordeón de Preguntas Frecuentes
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                const wasActive = parent.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+
+                if (!wasActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Ocultar aviso de cookies al hacer clic
+        document.getElementById('aceptarCookies').onclick = function () {
+            document.getElementById('cookies').style.display = 'none';
+        };
+
+         function moverAnimes(direccion) {
+    const grid = document.getElementById("animeGrid");
+
+    grid.scrollBy({
+        left: direccion * 450,
+        behavior: "smooth"
+    });
+}
+ 
+
+    </script>
+
+       
+
+
+
+</body>
+</html>

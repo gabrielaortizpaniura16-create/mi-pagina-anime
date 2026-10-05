@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceder - Animepoll </title>
+    <link rel="stylesheet" href="acceder.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            🟠 ANIMNEPOLL
+        </div>
+    </header>
+
+    <main class="login-container">
+
+        <!-- INICIO DE SESIÓN -->
+        <div class="login-box" id="loginBox">
+
+            <h1>Iniciar sesión</h1>
+
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="Ingresa tu correo">
+
+            <label>Contraseña</label>
+            <input type="password" placeholder="Ingresa tu contraseña">
+
+            <button class="btn-acceder">
+                ACCEDER
+            </button>
+
+            <a href="#" class="olvidaste">
+                ¿Olvidaste tu contraseña?
+            </a>
+
+            <div class="separador"></div>
+
+            <p>¿No tienes una cuenta?</p>
+
+            <button class="btn-crear" onclick="mostrarFormulario()">
+                CREAR CUENTA
+            </button>
+
+        </div>
+
+
+        <!-- FORMULARIO PARA CREAR CUENTA -->
+        <div class="login-box formulario-registro" id="formularioRegistro">
+
+            <h1>Crear cuenta</h1>
+
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Ingresa tu nombre">
+
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="Ingresa tu correo">
+
+            <label>Contraseña</label>
+            <input type="password" placeholder="Crea una contraseña">
+
+            <label>Confirmar contraseña</label>
+            <input type="password" placeholder="Repite tu contraseña">
+
+            <label>Fecha de nacimiento</label>
+            <input type="date">
+
+            <button class="btn-acceder">
+                REGISTRARME
+            </button>
+
+            <div class="separador"></div>
+
+            <p>¿Ya tienes una cuenta?</p>
+
+            <button class="btn-crear" onclick="mostrarLogin()">
+                VOLVER A ACCEDER
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <span>Términos de Uso</span>
+        <span>Política de Privacidad</span>
+        <span>Consentimiento de cookies</span>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function mostrarFormulario() {
+
+            document.getElementById("loginBox").style.display = "none";
+
+            document.getElementById("formularioRegistro").style.display = "block";
+
+        }
+
+
+        function mostrarLogin() {
+
+            document.getElementById("formularioRegistro").style.display = "none";
+
+            document.getElementById("loginBox").style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
